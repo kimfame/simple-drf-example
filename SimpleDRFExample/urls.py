@@ -33,13 +33,13 @@ router = DefaultRouter()
 router.register('article', ViewSet_Article, basename='article')
 
 # Generic ViewSet
-# url : class/viewset/generic/
-# url : class/viewset/generic/<int:pk>/
+# url : class/viewset/generic/article/
+# url : class/viewset/generic/article/<int:pk>/
 router.register('generic/article', GenericViewSet_Article, basename='generic_viewset_article')
 
 # Model ViewSet
-# url : class/viewset/model/
-# url : class/viewset/model/<int:pk>/
+# url : class/viewset/model/article/
+# url : class/viewset/model/article/<int:pk>/
 router.register('model/article', ModelViewSet_Article, basename='model_viewset_article')
 
 urlpatterns = [

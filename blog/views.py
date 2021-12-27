@@ -215,3 +215,5 @@ class GenericViewSet_Article(viewsets.GenericViewSet,
 class ModelViewSet_Article(viewsets.ModelViewSet):
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
+    http_method_names = ['get', 'post'] # allow only 'get', 'post' method
+    #http_method_names = ['get', 'post', 'put', 'delete']
